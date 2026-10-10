@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 7%;
+    --card: 30 18% 95%;
+    --card-foreground: 0 0% 7%;
+    --popover: 30 18% 95%;
+    --popover-foreground: 0 0% 7%;
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 30 12% 88%;
+    --secondary-foreground: 0 0% 7%;
+    --muted: 30 12% 90%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 91 100% 40%;
+    --accent-foreground: 30 18% 95%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 10% 82%;
+    --input: 30 10% 82%;
+    --ring: 144 14% 33%;
+    --chart-1: 144 14% 33%;
+    --chart-2: 18 44% 58%;
+    --chart-3: 30 18% 70%;
+    --chart-4: 0 0% 7%;
+    --chart-5: 30 12% 60%;
+    --radius: 0px;
+    --font-heading: 'DM Sans', sans-serif;
+    --font-body: 'Fira Code', monospace;
+    --font-display: 'Fira Code', monospace;
+    --font-mono: 'Fira Code', monospace;
+    --sidebar-background: 0 0% 7%;
+    --sidebar-foreground: 30 18% 95%;
+    --sidebar-primary: 144 14% 33%;
+    --sidebar-primary-foreground: 30 18% 95%;
+    --sidebar-accent: 0 0% 14%;
+    --sidebar-accent-foreground: 30 18% 95%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 144 14% 33%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+    font-size: 18px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  .hairline-h {
+    @apply w-full border-t;
+    border-color: hsl(var(--border));
+    border-width: 0.5px;
+  }
+  .hairline-v {
+    @apply h-full border-l;
+    border-color: hsl(var(--border));
+    border-width: 0.5px;
+  }
+  .oxygen-gap {
+    @apply py-20 md:py-28 lg:py-36;
+  }
+  .oxygen-gap-sm {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+  .technical-text {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .display-heading {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: clamp(2rem, 6vw, 7rem);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+  }
+  .section-heading {
+    font-family: var(--font-heading);
+    font-weight: 300;
+    font-size: clamp(1.75rem, 4vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(30 10% 75%);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(30 10% 60%);
+}
